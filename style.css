@@ -1,0 +1,417 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(270, 20%, 96%);
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+main{
+    display: flex;
+    height: inherit;
+}
+
+/*THE UI SECTION*/
+.UI{
+    flex-basis: 35%;
+    background-image: linear-gradient(to top left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    margin-bottom: 10%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    margin-left: -5rem;
+}
+
+.theUI{
+    background-color: hsl(0, 0%, 100%);
+    margin-left: 80%;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 70%;
+}
+
+.themain{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(270, 20%, 96%);
+    border-radius: 15px;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+}
+
+.head{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 0.8rem;
+    background-image: linear-gradient(to right,hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    align-items: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+}
+
+.arrow{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding-left: 1rem;
+    padding-right: auto;
+}
+
+.profile{
+    display: flex;
+    margin-left: 1rem;
+    margin-right: auto;
+}
+
+.about{
+    line-height: 1.3;
+}
+
+.about p{
+    margin: 0 auto 0 1rem;
+}
+
+.bold{
+    font-weight: 500;
+    font-size: 14px;
+    color: hsl(0, 0%, 100%);
+}
+
+.small{
+    font-size: 11px;
+    color: hsl(276, 100%, 81%);
+}
+
+.dp img{
+    border-radius: 100%;
+    width: 32px;
+    border: 2px solid hsl(0, 0%, 100%);
+}
+
+.more{
+    margin-right: 1rem;
+    margin-left: auto;
+    color: hsl(0, 0%, 100%);
+}
+
+.top-left div, .chat{
+    background-color: hsl(206, 6%, 79%);
+    width: fit-content;
+    line-height: 1.3;
+    padding: 0.4rem 1rem 0.4rem 0.6rem;
+    padding-left: 0.6rem;
+    border-radius: 10px;
+    color: hsl(276, 55%, 52%);
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.chat{
+    width: fit-content;
+}
+
+.top-left div:first-child{
+    margin-bottom: 0.6rem;
+}
+
+.right{
+    margin: 1.2rem 0.5rem 1.2rem auto;
+    width: fit-content;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.dogs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dogs img{
+    width: 54px;
+    border-radius: 10px;
+}
+
+.chats{
+    width: fit-content;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: hsl(0, 0%, 100%);
+    padding: 0.4rem 0.6rem;
+    border-radius: 10px;
+    line-height: 1.3;
+    color: hsl(271, 15%, 43%);
+}
+
+.right div:nth-child(2){
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.charges-container{
+    width: fit-content;
+}
+
+.charges{
+    display: flex;
+    align-items: center;
+    margin-top: 0.6rem;
+    margin-left: 0.5rem;
+    padding: 0.6rem;
+    background-image: linear-gradient(to left,hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-radius: 10px;
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    margin-left: 0.5rem;
+    margin-bottom: auto;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+/* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 2px solid hsl(289, 100%, 72%);
+}
+
+/*Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top:0;
+    left:0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 99%;
+    height: 99%;
+    border-radius: 50%;
+    background: hsl(0, 0%, 100%);
+}
+
+.time{
+    font-size: 11px;
+    color: hsl(0, 0%, 100%);
+    margin-left: 2rem;
+    margin-right: auto;
+}
+
+.price{
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.message{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.message input{
+    margin: 1rem 0.5rem;
+    width: calc(100% - 1rem);
+    padding: 1rem 0.5rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.message input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: hsl(206, 6%, 79%);
+    opacity: 1; /* Firefox */
+    font-size: 11px;
+}
+  
+.message input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: hsl(206, 6%, 79%);
+    font-size: 11px;
+}
+  
+.message input::-ms-input-placeholder { /* Microsoft Edge */
+    color: hsl(206, 6%, 79%);
+    font-size: 11px;
+}
+  
+  
+button{
+    border-radius: 100%;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: white;
+    margin-left: -3rem;
+    margin-right: 0;
+    background-color:  hsl(271, 36%, 24%);
+}
+
+/*THE TEXT SECTION*/
+
+.text{
+    flex-basis: fit-content;
+    line-height: 1.5;
+    justify-content: center;
+    height: fit-content;
+    margin: auto 10% auto auto;
+}
+
+.text-header{
+    color: hsl(271, 36%, 24%);
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.main-text{
+    color: hsl(270, 7%, 64%);
+    margin-top: 0;
+}
+
+.attribution{
+    font-size: 12px;
+    text-align: center;
+    background-color: hsl(289, 100%, 72%);
+    margin-bottom: 0;
+    margin-top: auto;
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%); 
+}
+
+.attribution a:hover{
+    text-decoration: none;
+}
+
+
+/*MEDIA QUERIES*/
+@media all and (max-width : 1250px){
+    
+.dogs img:nth-child(2){
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+}
+
+@media all and (max-width : 1050px){
+
+    .text{
+        margin-right: 4rem;
+    }
+
+}
+
+@media all and (max-width : 1000px){
+
+    main{
+        flex-direction: column;
+    }
+
+    .theUI{
+        margin-bottom: 0;
+        margin-top: 6rem;
+    }
+
+    .UI{
+        width: 70%;
+        margin-left: -25%;
+        margin-bottom: 0;
+    }
+
+    .text{
+        flex-basis: fit-content;
+        margin: 4rem auto;
+    }
+
+    .text-header{
+        margin-top: 0;
+    }
+
+}
+
+
+@media all and (max-width : 490px){
+
+    .profile{
+        margin-left: 10px;
+    }
+
+    .about{
+        margin-left: 10px;
+    }
+
+    .about p{
+        margin: 0;
+    }
+
+    .theUI{
+        width: 90%;
+    }
+
+    .time{
+        margin-left: 25px;
+        margin-right: auto;
+    }
+
+    .price{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .text{
+        width: fit-content;
+        margin-left: 1.8rem;
+        margin-right: 1.8rem;
+    }
+
+    .text br{
+        display: none;
+    }
+
+}
